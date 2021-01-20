@@ -12,7 +12,7 @@ async def signup():
 	password=input("[Server] What do you want your password to be?")
 	await db.set_dict({username:password})
 	await db.set(data=str(await db.view('data'))+ '\n' + username + '=' + password)
-	print(await db.view('data'))
+
 
 async def login():
   username=input("[Server] What is your username?")
@@ -30,7 +30,7 @@ async def login():
 print("[1]Sign Up")
 print("[2]Log in")
 
-liosu = input("T[Server] ype in the number of what you want to do \n>>>")
+liosu = input("[Server] Type in the number of what you want to do \n>>>")
 while liosu != "1" and liosu != "2":
   print("[Server] [Server] That is not in the menu.")
   liosu = input("Type in the number of what you want to do \n>>>")
